@@ -1,4 +1,4 @@
-# 6 pro tips for react developer
+# 6 tips for react developer
  1. using functional components
    benefits:
      - less code
