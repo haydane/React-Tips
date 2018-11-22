@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import logo from '../src/assets/haydane.JPG';
+import logo from './logo.svg';
+// import logo from '../src/assets/haydane.JPG';
 import './App.css';
 
 // class based components
 function SetImage(props)
 {
-  return (<img src={props.image} className="App-logo" alt="logo" />);
+  return (
+    <img src={props.image} className="App-logo" alt="logo" />
+  );
 }
 function SetLink(props)
 {
@@ -21,13 +23,24 @@ function SetLink(props)
   );
 }
 
+
 class App extends Component {
+  state = 
+  {
+    message: 'Hi! Dane',
+  }
+  //use arrow function instead of bind
+  logMessage = () =>
+  {
+    alert(this.state.message);
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <SetImage image={logo} /><br/>
-          <SetLink link={'http://www.fb.com/hay.dane.7'} title={'Hay Dane'} />
+          <SetImage image={logo} />
+          <SetLink link={'http://www.fb.com/hay.dane.7'} title={'Hay Dane'} /> <br/>
+          <input type="button" value="Click Me" onClick={this.logMessage}/>
         </header>
       </div>
     );

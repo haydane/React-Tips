@@ -5,7 +5,7 @@
      - easier to understand
      - stateless
      - simpler to test
-     - no 'this' binding
+     - no 'this' binding (with ES6 class react does not autobind function inside      the component and always frequently create new function when render)
      - easier to extract smaller components
        benefits:
          - read
